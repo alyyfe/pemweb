@@ -1,0 +1,337 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+:root {
+    --dark: #0C1B4D;
+    --ungu: #4A72FF;
+    --abu: #EAEEFF;
+}
+
+body {
+    background: #F4F7FF;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 15px 14%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all .6s ease;
+}
+
+.logo img {
+    max-width: 50px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.logo img:hover {
+    animation: wave 1s ease-in-out infinite;
+}
+
+.menu a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--dark);
+    margin: 0 30px;
+    transition: all .6s ease;
+}
+
+.menu a:hover {
+    font-weight: 700;
+}
+
+.btn-download {
+    display: inline-block;
+    background: var(--ungu);
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 30px 60px rgba(74, 114, 255, 0.25);
+}
+
+.btn-download:hover {
+    background: #4B7FFF;
+    box-shadow: 0px 20px 40px rgba(74, 114, 255, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+#hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 14% 20px;
+}
+
+.hero-left {
+    max-width: 50%;
+    margin-top: 50px;
+}
+
+.pre-title {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--ungu);
+
+}
+
+.main-title {
+    font-size: 34px;
+    color: #333;
+}
+
+.hero-left p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.button {
+    display: flex;
+    margin-top: 15px;
+}
+
+.btn-reg,
+.btn-learn {
+    display: inline-block;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.btn-reg {
+    background: var(--ungu);
+    color: white;
+    box-shadow: 0px 30px 60px rgba(74, 114, 255, 0.25);
+}
+
+.btn-learn {
+    background: #EAEEFF;
+    margin-left: 16px;
+    color: var(--ungu);
+}
+
+.btn-reg:hover {
+    background: #4B7FFF;
+    box-shadow: 0px 20px 40px rgba(74, 114, 255, 0.3);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.btn-learn:hover {
+    background: #D6E0FF;
+    color: #3A4DFF;
+    box-shadow: 0px 15px 30px rgba(74, 114, 255, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.hero-right {
+    max-width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-right img {
+    max-width: 470px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* sdf */
+.hero-column.content-wrapper {
+    padding: 1rem 2rem;
+    border: 1px solid #43B0F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    position: relative;
+}
+
+.rectangle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #43B0F1;
+}
+
+.rectangle.top-left {
+    left: -6px;
+    top: -6px;
+}
+
+.rectangle.top-right {
+    right: -6px;
+    top: -6px;
+}
+
+.rectangle.bottom-left {
+    left: -6px;
+    bottom: -6px;
+}
+
+.rectangle.bottom-right {
+    right: -6px;
+    bottom: -6px;
+}
+
+.bagus-badge img {
+    width: 200px;
+    /* Ukuran gambar tetap sesuai keinginan */
+    height: auto;
+    /* Sesuaikan tinggi berdasarkan lebar agar proporsional */
+    object-fit: contain;
+    /* Pastikan gambar tetap proporsional di dalam kontainer */
+}
+
+#judulkartu {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.why {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.why-main-title {
+    margin-bottom: 10px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #F24E1E, #A259FF, #FF7262, #1ABCFE);
+    /* Warna gradasi tanpa hijau */
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-animation 4s ease-in-out infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Styling untuk kontainer kartu */
+#kartu-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 14% 20px;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Styling untuk kartu individu */
+.kartu {
+    background-color: #EAEEFF;
+    border-radius: 10px;
+    box-shadow: 0px 30px 60px rgba(74, 114, 255, 0.25);
+    overflow: hidden;
+    width: 23%;
+    /* Menyesuaikan lebar agar muat 4 kartu dalam satu baris */
+    margin: 10px;
+    /* Memberi jarak antara kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover untuk kartu */
+.kartu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Gambar di dalam kartu */
+.kartu img {
+    width: 100%;
+    height: 150px;
+    /* Atur tinggi gambar sesuai kebutuhan */
+    object-fit: cover;
+    /* Memastikan gambar tetap dalam proporsi yang benar */
+    border-bottom: 2px solid #ccc;
+}
+
+
+/* Konten di dalam kartu */
+.card-content {
+    padding: 15px;
+}
+
+.card-content h1 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #000000;
+    padding: 0 0 20px 0;
+}
+
+.icon-text {
+    margin-right: 10px;
+}
+
+.ri-heart-line {
+    color: red;
+}
+
+.button-container {
+    display: flex;
+    margin-top: 0px;
+}
+
+/* Tombol untuk melihat selengkapnya */
+.card-content button {
+    display: inline-block;
+    background: var(--ungu);
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 10px 20px rgba(74, 114, 255, 0.15);
+    border-style: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-content button:hover {
+    background-color: #0056b3;
+}
